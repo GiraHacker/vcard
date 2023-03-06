@@ -1,22 +1,16 @@
-export default function Social() {
+import React from "react";
+
+export default function Social({ socials }) {
   return (
     <div className="social-links">
       <ul>
-        <li>
-          <a href="#" target="_blank">
-            <i className="fab fa-linkedin-in"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_blank">
-            <i className="fab fa-facebook-f"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_blank">
-            <i className="fab fa-twitter"></i>
-          </a>
-        </li>
+        {socials.map((social) => (
+          <li key={social.name}>
+            <a href={social.link} target="_blank">
+              <i className={`fab ${social.icon}`}></i>
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );

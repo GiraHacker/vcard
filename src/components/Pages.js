@@ -7,7 +7,7 @@ export default function Pages({ data }) {
   return (
     <div className="content-area">
       <div className="animated-sections">
-        <Home page={data.menus[0]} />
+        <Home page={data.menus[0]} name ={data.name}   />
         <AboutMe page={data.menus[1]}/>
         <Resume page={data.menus[2]}/>
         <Contact page={data.menus[3]}/>

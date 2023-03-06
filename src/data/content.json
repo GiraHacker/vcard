@@ -1,6 +1,6 @@
 {
-    "name": "Jonathas Souza",
-    "ocupation": "Software Enginner",
+    "name": "Jonathas",
+    "occupation": "Software Enginner [Full-Stack]",
     "menus":[
         {
             "menu":"Home",
@@ -12,9 +12,21 @@
                 [
                     {
                         "name": "Linkedin",
+                        "icon": "fa-linkedin-in",
                         "link": "https://www.linkedin.com/in/jonathas-souza-73674931/"
+                    },
+                    {
+                        "name": "Facebook",
+                        "icon": "fa-facebook-f",
+                        "link": "#"
+                    },
+                    {
+                        "name": "Twitter",
+                        "icon": "fa-twitter",
+                        "link": "#"
                     }
-                ]
+                ],
+                "occupations":["Back-End","And","Front-End"]
             }
         },
         {
@@ -22,7 +34,7 @@
             "classIcon":"lnr-user",
             "content":
             {
-          
+                "text": ""
             }
         },
         {
@@ -32,8 +44,7 @@
             {
          
             }
-        }
-		,
+        },
         {
             "menu":"Contato",
             "classIcon":"lnr-envelope",
