@@ -2,22 +2,27 @@ import DownloadCV from "./DownloadCV";
 import Menu from "./Menu";
 import Social from "./Social";
 
-export default function Header() {
-    return (
-        <header id="site_header" className="header mobile-menu-hide">
-        <div className="header-content">
-          <div className="header-photo">
-            <img src="../img/main_photo.jpg" alt="Alex Smith" />
-          </div>
-          <div className="header-titles">
-            <h2>Alex Smith</h2>
-            <h4>Web Designer</h4>
-          </div>
-        </div>
-        <Menu />
-        <Social />
-        <DownloadCV />
-        <div className="copyrights">© 2023 All rights reserved.</div>
-      </header>
-    );
+
+export default function Header({ data }) {
+  function handleSelect(item) {
+    console.log(`Selected item: ${item.menu}`);
   }
+  
+  return (
+    <header id="site_header" className="header mobile-menu-hide">
+      <div className="header-content">
+        <div className="header-photo">
+          <img src="../img/main_photo.jpg" alt={data.name} />
+        </div>
+        <div className="header-titles">
+          <h2>{data.name}</h2>
+          <h4>{data.ocupation}</h4>
+        </div>
+      </div>
+      <Menu items={data.menus} onSelect={handleSelect} />
+      <Social />
+      <DownloadCV url={data.menus[0].content.url} />
+      <div className="copyrights">© 2023 All rights reserved.</div>
+    </header>
+  );
+}

@@ -1,10 +1,11 @@
-export default function AboutMe() {
+export default function AboutMe({page}) {
+  function clear(item) {
+    return item.replace(/[^a-zA-Z0-9 ]/g, "").replace(/\s+/g, "");
+  }
     return (
-        <section data-id="about-me" className="animated-section">
+        <section data-id={`${clear(page.menu).toLowerCase()}`} className="animated-section">
         <div className="page-title">
-          <h2>
-            About <span>Me</span>
-          </h2>
+          <h2>{page.menu}</h2>
         </div>
 
         <div className="section-content">

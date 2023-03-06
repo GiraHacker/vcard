@@ -3,14 +3,14 @@ import AboutMe from "./custom_pages/AboutMe";
 import Resume from "./custom_pages/Resume";
 import Contact from "./custom_pages/Contact";
 
-export default function Pages() {
+export default function Pages({ data }) {
   return (
     <div className="content-area">
       <div className="animated-sections">
-        <Home />
-        <AboutMe />
-        <Resume />
-        <Contact />
+        <Home page={data.menus[0]} />
+        <AboutMe page={data.menus[1]}/>
+        <Resume page={data.menus[2]}/>
+        <Contact page={data.menus[3]}/>
       </div>
     </div>
   );

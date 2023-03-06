@@ -1,0 +1,46 @@
+{
+    "name": "Jonathas Souza",
+    "ocupation": "Software Enginner",
+    "menus":[
+        {
+            "menu":"Home",
+            "classIcon":"lnr-home",
+            "content":
+            {
+                "url": "./data/Curriculo.docx",
+                "socials": 
+                [
+                    {
+                        "name": "Linkedin",
+                        "link": "https://www.linkedin.com/in/jonathas-souza-73674931/"
+                    }
+                ]
+            }
+        },
+        {
+            "menu":"Sobre Mim",
+            "classIcon":"lnr-user",
+            "content":
+            {
+          
+            }
+        },
+        {
+            "menu":"Resumo",
+            "classIcon":"lnr-graduation-hat",
+            "content":
+            {
+         
+            }
+        }
+		,
+        {
+            "menu":"Contato",
+            "classIcon":"lnr-envelope",
+            "content":
+            {
+         
+            }
+        }
+    ]
+}
