@@ -1,8 +1,11 @@
-export default function Resume() {
+export default function Resume({page}) {
+  function clear(item) {
+    return item.replace(/[^a-zA-Z0-9 ]/g, "").replace(/\s+/g, "");
+  }
     return (
-        <section data-id="resume" className="animated-section">
+        <section data-id={`${clear(page.menu).toLowerCase()}`} className="animated-section">
         <div className="page-title">
-          <h2>Resume</h2>
+          <h2>{page.menu}</h2>
         </div>
 
         <div className="section-content">
