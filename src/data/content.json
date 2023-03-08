@@ -1,57 +1,84 @@
 {
-    "name": "Jonathas",
-    "occupation": "Software Enginner [Full-Stack]",
-    "menus":[
-        {
-            "menu":"Home",
-            "classIcon":"lnr-home",
-            "content":
+  "name": "Jonathas",
+  "occupation": "Software Enginner [Full-Stack]",
+  "menus": [
+    {
+      "menu": "Home",
+      "classIcon": "lnr-home",
+      "content": {
+        "url": "./data/Curriculo.docx",
+        "socials": [
+          {
+            "name": "Linkedin",
+            "icon": "fa-linkedin-in",
+            "link": "https://www.linkedin.com/in/jonathas-souza-73674931/"
+          },
+          {
+            "name": "Facebook",
+            "icon": "fa-facebook-f",
+            "link": "#"
+          },
+          {
+            "name": "Twitter",
+            "icon": "fa-twitter",
+            "link": "#"
+          }
+        ],
+        "occupations": ["Back-End", "And", "Front-End"]
+      }
+    },
+    {
+      "menu": "Sobre Mim",
+      "classIcon": "lnr-user",
+      "content": {
+        "text": [
+          "Sou um engenheiro de software sênior com mais de 10 anos de experiência em desenvolvimento de software. Durante minha carreira, tenho me destacado na criação de soluções de software robustas e escaláveis, utilizando diversas linguagens de programação e tecnologias.",
+          "Minha experiência inclui o desenvolvimento de aplicativos para desktop e web, bem como a integração de sistemas complexos. Além disso, possuo sólidas habilidades em tecnologias Microsoft e comunicação eficaz com clientes e colegas de equipe.",
+          "Ao longo da minha carreira, tenho trabalhado em projetos desafiadores em uma variedade de setores, incluindo finanças, saúde e tecnologia. Sou apaixonado por aprender e estar atualizado com as mais recentes tendências e tecnologias em meu campo, e estou sempre procurando oportunidades para aplicar minhas habilidades e conhecimentos em novos projetos emocionantes.",
+          "Estou animado para continuar minha carreira como engenheiro de software sênior em uma organização progressiva e colaborativa, onde possa trabalhar em equipe e ajudar a impulsionar o sucesso da empresa."
+        ],
+        "age": 38,
+        "city": "São Paulo",
+        "zone": "Zona Sul",
+        "email": "jonathas.js@gmail.com",
+        "phone": "99190-4628",
+        "whatido": {
+          "title": "Já Trabalhei",
+          "columns": 2,
+          "features": [
             {
-                "url": "./data/Curriculo.docx",
-                "socials": 
-                [
-                    {
-                        "name": "Linkedin",
-                        "icon": "fa-linkedin-in",
-                        "link": "https://www.linkedin.com/in/jonathas-souza-73674931/"
-                    },
-                    {
-                        "name": "Facebook",
-                        "icon": "fa-facebook-f",
-                        "link": "#"
-                    },
-                    {
-                        "name": "Twitter",
-                        "icon": "fa-twitter",
-                        "link": "#"
-                    }
-                ],
-                "occupations":["Back-End","And","Front-End"]
-            }
-        },
-        {
-            "menu":"Sobre Mim",
-            "classIcon":"lnr-user",
-            "content":
+              "title": "Sistemas Financeiros",
+              "icon": "lnr-chart-bars",
+              "description": "Trabalhei em sistemas dedicados a atender às necessidades de diferentes segmentos do setor financeiro. Em particular, tive a oportunidade de trabalhar em projetos relacionados à Previdência, onde desenvolvi soluções para gestão de fundos de pensão e planos de aposentadoria. Também trabalhei em sistemas para a Carteira Global, que permitia consolidar todas as informações financeiras de um cliente em um só lugar, facilitando a gestão de seus ativos e investimentos.    Além disso, trabalhei na área de câmbio, desenvolvendo soluções para atender às demandas dos clientes em relação a transações internacionais, monitorando taxas de câmbio e fornecendo análises e insights para auxiliar na tomada de decisões de investimento. Minha experiência em sistemas financeiros me permitiu adquirir um amplo conhecimento das operações financeiras, bem como habilidades em programação e análise de dados."
+            },
             {
-                "text": ""
-            }
-        },
-        {
-            "menu":"Resumo",
-            "classIcon":"lnr-graduation-hat",
-            "content":
+              "title": "Sistema de Risco de Crédito",
+              "icon": "lnr-warning",
+              "description": "Trabalhei como desenvolvedor em um dos maiores bancos do Brasil, na área de risco de crédito. Meu papel principal foi desenvolver sistemas e soluções que auxiliavam na gestão e mitigação de riscos financeiros do banco. Isso envolveu o uso de diversas tecnologias e ferramentas, desde plataformas de análise de dados até linguagens de programação especializadas em finanças.  Durante meu tempo no banco, trabalhei em projetos de grande escala, incluindo o desenvolvimento de sistemas de gerenciamento de risco de crédito, que permitiam aos tomadores de decisão monitorar e avaliar riscos de empréstimos e investimentos. Também participei do desenvolvimento de ferramentas analíticas que ajudaram na previsão de perdas e na identificação de oportunidades de negócios com menor risco. Minha experiência em desenvolvimento na área de risco de crédito me permitiu adquirir conhecimentos em finanças e risco, bem como habilidades em programação, análise de dados e resolução de problemas complexos. Como resultado, fui capaz de contribuir significativamente para a melhoria da gestão de riscos financeiros do banco e, consequentemente, para a melhoria dos resultados do negócio."
+            },
             {
-         
-            }
-        },
-        {
-            "menu":"Contato",
-            "classIcon":"lnr-envelope",
-            "content":
+              "title": "Sistema de Investigação",
+              "icon": "lnr-magnifier",
+              "description": "Trabalhei em um sistema de investigação que foi desenvolvido para a polícia civil. O sistema foi projetado para ajudar os investigadores a coletar, armazenar e analisar informações relevantes para investigações criminais. Como parte da equipe de desenvolvimento, minha função foi ajudar a criar e implementar recursos que permitissem aos usuários do sistema realizar pesquisas avançadas em grandes conjuntos de dados, gerenciar e compartilhar informações de forma segura e eficiente, e automatizar tarefas rotineiras para aumentar a eficiência e a precisão da investigação. Além disso, trabalhei em estreita colaboração com a polícia civil para garantir que o sistema atendesse às suas necessidades específicas e cumprisse os requisitos legais e regulamentares. No geral, meu trabalho foi essencial para permitir que os investigadores da polícia civil realizassem investigações mais eficazes e eficientes."
+            },
             {
-         
+              "title": "Sistema de Cotação",
+              "icon": "lnr-pie-chart",
+              "description": "Trabalhei em um sistema de cotação de produtos para uma empresa americana. O sistema foi desenvolvido para permitir que os setor comercial da empresa recebessem cotações precisas e detalhadas para produtos de sua escolha. Como parte da equipe de desenvolvimento, minha função era criar e implementar recursos que tornassem o processo de cotação mais eficiente e preciso. Isso incluiu trabalhar em estreita colaboração com a equipe de vendas da empresa para entender as necessidades dos clientes e garantir que o sistema atendesse a essas necessidades. Também desenvolvi recursos que permitiam aos clientes comparar preços, escolher entre diferentes opções de envio e personalizar suas cotações de acordo com suas necessidades específicas. Ao longo do tempo, meu trabalho ajudou a tornar o processo de cotação mais eficiente e a melhorar a satisfação do cliente na empresa."
             }
+          ]
         }
-    ]
+      }
+    },
+    {
+      "menu": "Resumo",
+      "classIcon": "lnr-graduation-hat",
+      "content": {}
+    },
+    {
+      "menu": "Contato",
+      "classIcon": "lnr-envelope",
+      "content": {}
+    }
+  ]
 }
