@@ -28,7 +28,7 @@
       }
     },
     {
-      "menu": "Sobre Mim",
+      "menu": "Sobre",
       "classIcon": "lnr-user",
       "content": {
         "text": [
@@ -43,7 +43,7 @@
         "email": "jonathas.js@gmail.com",
         "phone": "99190-4628",
         "whatido": {
-          "title": "Já Trabalhei",
+          "title": "Casos de uso",
           "columns": 2,
           "features": [
             {
@@ -66,19 +66,110 @@
               "icon": "lnr-pie-chart",
               "description": "Trabalhei em um sistema de cotação de produtos para uma empresa americana. O sistema foi desenvolvido para permitir que os setor comercial da empresa recebessem cotações precisas e detalhadas para produtos de sua escolha. Como parte da equipe de desenvolvimento, minha função era criar e implementar recursos que tornassem o processo de cotação mais eficiente e preciso. Isso incluiu trabalhar em estreita colaboração com a equipe de vendas da empresa para entender as necessidades dos clientes e garantir que o sistema atendesse a essas necessidades. Também desenvolvi recursos que permitiam aos clientes comparar preços, escolher entre diferentes opções de envio e personalizar suas cotações de acordo com suas necessidades específicas. Ao longo do tempo, meu trabalho ajudou a tornar o processo de cotação mais eficiente e a melhorar a satisfação do cliente na empresa."
             }
-          ]
+          ],
+          "enterprise" :
+          {
+            "title": "Empresas onde já trabalhei",
+            "logos":
+            [
+                {
+                  "link": "#",
+                  "image": "logo-1.jpg"
+                },
+                {
+                  "link": "#",
+                  "image": "logo-2.png"
+                },
+                {
+                  "link": "#",
+                  "image": "logo-3"
+                }
+            ]
+          }
         }
       }
     },
     {
       "menu": "Resumo",
       "classIcon": "lnr-graduation-hat",
-      "content": {}
+      "content": {
+          "education" :
+          [
+              {
+                "year": 2008,
+                "school" : "FMU- Faculdade Nações Unidas"
+              },
+              {
+                "year": 2007,
+                "school" : "S.O.S Computadores"
+              }
+          ],
+          "experience":[
+            {
+              "de":2019,
+              "ate":2023,
+              "company": "XP Investimentos",
+              "position": "Engenheiro de Software Senior 2",
+              "description" : "Enrolado pela empresa"
+
+            }
+          ],
+          "skills": 
+          {
+              "title" : "Coding Skills",
+              "list" : [
+              {
+                  "title": "C#",
+                  "percent": 40
+              }
+            ]
+          },
+          "skillsExtra" :  {
+            "title" : "Extra Skills",
+            "list" : [
+              {
+                "title" : "Redis",
+                "percent": 50
+              }
+
+            ]
+        },
+          "knowledges" :{
+            "title" : "Conhecimentos",
+            "list" :  [ "Redis", "Azure", "AWS"]
+          },
+          "certificates":
+          {
+            "title" : "Certificados",
+            "list" :  [ 
+              {
+                "title": "Private Bank",
+                "membro": "",
+                "date" : ""
+              }
+            ]
+          }
+      }
     },
     {
       "menu": "Contato",
       "classIcon": "lnr-envelope",
-      "content": {}
+      "content": 
+      {
+          "locality": "São Paulo",
+          "phone" : "99190-4628",
+          "email":"jonathas.js@gmail.com",
+          "freelancer" : true,
+          "form": {
+              "title": "Como eu posso lhe ajudar?",
+              "fullname": "Nome Completo",
+              "email": "Endereço de e-mail",
+              "subject" : "Assunto",
+              "message" : "Sua Mensagem",
+              "button": "Enviar Mensagem"
+
+          }
+      }
     }
   ]
 }
