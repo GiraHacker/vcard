@@ -9,7 +9,7 @@ export default function Menu({ items, onSelect }) {
     <ul className="main-menu">
       {items.map((item) => (
         <li
-          key={item.menu}
+          key={`menu${item.menu}`}
           className={`item ${hasClass ? "" : "active"}`}
           onClick={() => onSelect(item)}
         >

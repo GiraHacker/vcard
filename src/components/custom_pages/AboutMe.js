@@ -22,8 +22,8 @@ export default function AboutMe({ page }) {
       <div className="section-content">
         <div className="row">
           <div className="col-xs-12 col-sm-7">
-            {page.content.text.map((texto, index) => (
-              <p key={index}>{texto}</p>
+            {page.content.text.map((texto, indexTexto) => (
+              <p key={`texto-${indexTexto}`}>{texto}</p>
             ))}
           </div>
           <div className="col-xs-12 col-sm-5">
@@ -42,7 +42,7 @@ export default function AboutMe({ page }) {
                 <li>
                   <span className="title">E-mail:</span>
                   <span className="value">
-                    <a href={`mailto: ${page.content.email}`}>
+                    <a href={`mailto: ${page.content.email}`} rel="noreferrer">
                       {page.content.email}
                     </a>
                   </span>
@@ -81,163 +81,44 @@ export default function AboutMe({ page }) {
         {page.content.whatido.features.map((row, indexRow) => {
           if (indexRow % page.content.whatido.columns === 0) {
             return (
-              <>
-                <div key={`#row${indexRow}`} className="row">
+              <React.Fragment key={`row-${indexRow}`}>
+                <div className="row">
                   {Array.from({ length: page.content.whatido.columns }).map(
-                    (column, indexColumn) => (
-                      <div
-                        key={`#column${indexColumn}`}
-                        className="col-xs-12 col-sm-6"
-                      >
-                        <div className="col-inner">
-                          <div className="info-list-w-icon">
-                            <div className="info-block-w-icon">
-                                    <div className="ci-icon">
-                                    <i className={`lnr ${page.content.whatido.features[indexRow + indexColumn].icon}`}></i>
-                                    </div>
-                                    <div className="ci-text">
-                                    <h4>{page.content.whatido.features[indexRow + indexColumn].title}</h4>
-                                    <p>
-                                        {page.content.whatido.features[indexRow + indexColumn].description}
-                                    </p>
+                    (column, indexColumn) => {
+                      const key = `row-${indexRow}column-${indexColumn}`;
+                      const featureIndex = indexRow + indexColumn;
+                      if (page.content.whatido.features[featureIndex]) {
+                        const { icon, title, description } =
+                          page.content.whatido.features[featureIndex];
+                        return (
+                          <div key={key} className="col-xs-12 col-sm-6">
+                            <div className="col-inner">
+                              <div className="info-list-w-icon">
+                                <div className="info-block-w-icon">
+                                  <div className="ci-icon">
+                                    <i className={`lnr ${icon}`}></i>
                                   </div>
+                                  <div className="ci-text">
+                                    <h4>{title}</h4>
+                                    <p>{description}</p>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    )
+                        );
+                      } else {
+                        return null;
+                      }
+                    }
                   )}
                 </div>
-                <div className="white-space-30"></div>
-              </>
+                <div className="white-space-50"></div>
+              </React.Fragment>
             );
           }
+          return null;
         })}
-        {/* <div className="row">
-          <div className="col-xs-12 col-sm-6">
-            <div className="col-inner">
-              <div className="info-list-w-icon">
-                <div className="info-block-w-icon">
-                  <div className="ci-icon">
-                    <i className="lnr lnr-store"></i>
-                  </div>
-                  <div className="ci-text">
-                    <h4>Ecommerce</h4>
-                    <p>
-                      Pellentesque pellentesque, ipsum sit amet auctor accumsan,
-                      odio tortor bibendum massa, sit amet ultricies ex lectus
-                      scelerisque nibh. Ut non sodales.
-                    </p>
-                  </div>
-                </div>
-                <div className="info-block-w-icon">
-                  <div className="ci-icon">
-                    <i className="lnr lnr-laptop-phone"></i>
-                  </div>
-                  <div className="ci-text">
-                    <h4>Web Design</h4>
-                    <p>
-                      Pellentesque pellentesque, ipsum sit amet auctor accumsan,
-                      odio tortor bibendum massa, sit amet ultricies ex lectus
-                      scelerisque nibh. Ut non sodales.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-xs-12 col-sm-6">
-            <div className="col-inner">
-              <div className="info-list-w-icon">
-                <div className="info-block-w-icon">
-                  <div className="ci-icon">
-                    <i className="lnr lnr-pencil"></i>
-                  </div>
-                  <div className="ci-text">
-                    <h4>Copywriting</h4>
-                    <p>
-                      Pellentesque pellentesque, ipsum sit amet auctor accumsan,
-                      odio tortor bibendum massa, sit amet ultricies ex lectus
-                      scelerisque nibh. Ut non sodales.
-                    </p>
-                  </div>
-                </div>
-                <div className="info-block-w-icon">
-                  <div className="ci-icon">
-                    <i className="lnr lnr-flag"></i>
-                  </div>
-                  <div className="ci-text">
-                    <h4>Management</h4>
-                    <p>
-                      Pellentesque pellentesque, ipsum sit amet auctor accumsan,
-                      odio tortor bibendum massa, sit amet ultricies ex lectus
-                      scelerisque nibh. Ut non sodales.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="white-space-30"></div>
-
-        <div className="row">
-          <div className="col-xs-12 col-sm-12">
-            <div className="block-title">
-              <h3>Empresas</h3>
-            </div>
-          </div>
-        </div> */}
-
-        <div className="row">
-          <div className="col-xs-12 col-sm-12">
-            <div className="clients owl-carousel">
-              <div className="client-block">
-                <a href="#" target="_blank" title="Logo">
-                  <img src="img/clients/client-1.png" alt="Logo" />
-                </a>
-              </div>
-
-              <div className="client-block">
-                <a href="#" target="_blank" title="Logo">
-                  <img src="img/clients/client-2.png" alt="Logo" />
-                </a>
-              </div>
-
-              <div className="client-block">
-                <a href="#" target="_blank" title="Logo">
-                  <img src="img/clients/client-3.png" alt="Logo" />
-                </a>
-              </div>
-
-              <div className="client-block">
-                <a href="#" target="_blank" title="Logo">
-                  <img src="img/clients/client-4.png" alt="Logo" />
-                </a>
-              </div>
-
-              <div className="client-block">
-                <a href="#" target="_blank" title="Logo">
-                  <img src="img/clients/client-5.png" alt="Logo" />
-                </a>
-              </div>
-
-              <div className="client-block">
-                <a href="#" target="_blank" title="Logo">
-                  <img src="img/clients/client-6.png" alt="Logo" />
-                </a>
-              </div>
-
-              <div className="client-block">
-                <a href="#" target="_blank" title="Logo">
-                  <img src="img/clients/client-7.png" alt="Logo" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
