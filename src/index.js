@@ -15,6 +15,7 @@ const jsScript = [
                   'js/modernizr.custom.js',
                   'js/animating.js',
                   'js/imagesloaded.pkgd.min.js',
+                  'https://www.google.com/recaptcha/api.js',
                   'js/perfect-scrollbar.min.js',
                   'js/jquery.shuffle.min.js',
                   'js/masonry.pkgd.min.js',
