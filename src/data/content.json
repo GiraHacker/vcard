@@ -203,8 +203,8 @@
       "menu": "Contato",
       "classIcon": "lnr-envelope",
       "content": {
-        "locality": "São Paulo",
-        "phone": "99190-4628",
+        "locality": "São Paulo, Brasil",
+        "phone": "+55 11 99190-4628",
         "email": "jonathas.js@gmail.com",
         "freelancer": true,
         "form": {

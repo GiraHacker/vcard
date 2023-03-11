@@ -1,11 +1,14 @@
+import React from "react";
+import ColorText from "../ColorText";
+import { removeAllCaracteresSpecial } from "../helpers/utils.js";
+
+
 export default function Contact({page}) {
-  function clear(item) {
-    return item.replace(/[^a-zA-Z0-9 ]/g, "").replace(/\s+/g, "");
-  }
+  const isRequired = "é obrigatório.";
   return (
-    <section data-id={`${clear(page.menu).toLowerCase()}`}  className="animated-section">
+    <section data-id={`${removeAllCaracteresSpecial(page.menu).toLowerCase()}`}  className="animated-section">
       <div className="page-title">
-        <h2>{page.menu}</h2>
+        <h2><ColorText text= {page.menu} /></h2>
       </div>
 
       <div className="section-content">
@@ -13,14 +16,14 @@ export default function Contact({page}) {
           <div className="col-xs-12 col-sm-4">
             <div className="lm-info-block gray-default">
               <i className="lnr lnr-map-marker"></i>
-              <h4>San Francisco</h4>
+              <h4>{page.content.locality}</h4>
               <span className="lm-info-block-value"></span>
               <span className="lm-info-block-text"></span>
             </div>
 
             <div className="lm-info-block gray-default">
               <i className="lnr lnr-phone-handset"></i>
-              <h4>415-832-2000</h4>
+              <h4>{page.content.phone}</h4>
               <span className="lm-info-block-value"></span>
               <span className="lm-info-block-text"></span>
             </div>
@@ -28,21 +31,15 @@ export default function Contact({page}) {
             <div className="lm-info-block gray-default">
               <i className="lnr lnr-envelope"></i>
               <h4>
-                <a
-                  href="https://lmpixels.com/cdn-cgi/l/email-protection"
-                  className="__cf_email__"
-                  data-cfemail="4a2b262f320a2f322b273a262f64292527"
-                >
-                  [email&#160;protected]
-                </a>
+                {page.content.email}
               </h4>
               <span className="lm-info-block-value"></span>
               <span className="lm-info-block-text"></span>
             </div>
 
             <div className="lm-info-block gray-default">
-              <i className="lnr lnr-checkmark-circle"></i>
-              <h4>Freelance Available</h4>
+            <i className={page.content.freelancer ? "lnr lnr-checkmark-circle" : "lnr lnr-cross"}></i>
+              <h4>{`Freelance ${ page.content.freelancer ? 'Disponível':  'Indisponível' }` }</h4>
               <span className="lm-info-block-value"></span>
               <span className="lm-info-block-text"></span>
             </div>
@@ -51,18 +48,16 @@ export default function Contact({page}) {
           <div className="col-xs-12 col-sm-8">
             <div id="map" className="map">
               <div className="lmpixels-map">
-                {/* <iframe
-                  frameBorder="0"
-                  scrolling="no"
-                  marginHeight="0"
-                  marginWidth="0"
-                  src=""
-                ></iframe> */}
+                <iframe
+                  title="local"
+                  loading="lazy"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.9502406797145!2d-46.74102738502019!3d-23.630743469767526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce50e8c211d583%3A0x9e3d3f4fc4dcafcf!2sVila%20Andrade%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1sen!2sbr!4v1647009915422!5m2!1sen!2sbr&amp;zoom=100&amp;output=embed"
+                ></iframe>
               </div>
             </div>
             <div className="block-title">
               <h3>
-                How Can I <span>Help You?</span>
+                <ColorText text= {page.content.form.title} />
               </h3>
             </div>
 
@@ -73,7 +68,6 @@ export default function Contact({page}) {
               method="post"
             >
               <div className="messages"></div>
-
               <div className="controls two-columns">
                 <div className="fields clearfix">
                   <div className="left-column">
@@ -85,9 +79,9 @@ export default function Contact({page}) {
                         className="form-control"
                         placeholder=""
                         required="required"
-                        data-error="Name is required."
+                        data-error={`${page.content.form.fullname} ${isRequired}`}
                       />
-                      <label>Full Name</label>
+                      <label>{page.content.form.fullname}</label>
                       <div className="form-control-border"></div>
                       <div className="help-block with-errors"></div>
                     </div>
@@ -100,9 +94,9 @@ export default function Contact({page}) {
                         className="form-control"
                         placeholder=""
                         required="required"
-                        data-error="Valid email is required."
+                        data-error={`${page.content.form.email} válido ${isRequired}`}
                       />
-                      <label>Email Address</label>
+                      <label>{page.content.form.email}</label>
                       <div className="form-control-border"></div>
                       <div className="help-block with-errors"></div>
                     </div>
@@ -115,9 +109,9 @@ export default function Contact({page}) {
                         className="form-control"
                         placeholder=""
                         required="required"
-                        data-error="Subject is required."
+                        data-error={`${page.content.form.subject} ${isRequired}`}
                       />
-                      <label>Subject</label>
+                      <label>{page.content.form.subject}</label>
                       <div className="form-control-border"></div>
                       <div className="help-block with-errors"></div>
                     </div>
@@ -131,9 +125,9 @@ export default function Contact({page}) {
                         placeholder=""
                         rows="7"
                         required="required"
-                        data-error="Please, leave me a message."
+                        data-error={`Para ser enviada, ${page.content.form.message.toLowerCase()} ${isRequired} `}
                       ></textarea>
-                      <label>Message</label>
+                      <label>{page.content.form.message}</label>
                       <div className="form-control-border"></div>
                       <div className="help-block with-errors"></div>
                     </div>
@@ -149,7 +143,7 @@ export default function Contact({page}) {
                 <input
                   type="submit"
                   className="button btn-send"
-                  value="Send message"
+                  value={page.content.form.button}
                 />
               </div>
             </form>
