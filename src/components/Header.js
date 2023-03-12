@@ -4,11 +4,7 @@ import Social from "./Social";
 
 
 export default function Header({ data }) {
-  function handleSelect(item) {
-    console.log(`Selected item: ${item.menu}`);
-  }
   return (
-    
     <header id="site_header" className="header mobile-menu-hide">
       <div className="header-content">
         <div className="header-photo">
@@ -19,7 +15,7 @@ export default function Header({ data }) {
           <h4>{data.occupation}</h4>
         </div>
       </div>
-      <Menu items={data.menus} onSelect={handleSelect} />
+      <Menu items={data.menus} />
       <Social socials={data.menus[0].content.socials} />
       <DownloadCV url={data.menus[0].content.url} />
       <div className="copyrights">© 2023 All rights reserved.</div>

@@ -1,7 +1,7 @@
-import Home from "./custom_pages/Home";
-import AboutMe from "./custom_pages/AboutMe";
-import Resume from "./custom_pages/Resume";
-import Contact from "./custom_pages/Contact";
+import Home from "../custom_pages/Home";
+import AboutMe from "../custom_pages/AboutMe";
+import Resume from "../custom_pages/Resume";
+import Contact from "../custom_pages/Contact";
 
 export default function Pages({ data }) {
   return (

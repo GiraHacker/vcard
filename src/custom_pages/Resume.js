@@ -1,8 +1,8 @@
 import React from "react";
 import moment from 'moment';
 import 'moment/locale/pt-br';
-import ColorText from "../ColorText";
-import { removeAllCaracteresSpecial } from "../helpers/utils.js";
+import ColorText from "../components/ColorText";
+import { removeAllCaracteresSpecial } from "../components/helpers/utils.js";
 
 
 export default function Resume({ page }) {
@@ -14,11 +14,12 @@ export default function Resume({ page }) {
 
   return (
     <section
-      data-id={`${removeAllCaracteresSpecial(page.menu).toLowerCase()}`}
+      
+      id={`#${removeAllCaracteresSpecial(page.menu).toLowerCase()}`}
       className="animated-section"
     >
       <div className="page-title">
-        <h2>{page.menu}</h2>
+        <h2><ColorText text= {page.menu} /></h2>
       </div>
 
       <div className="section-content">
@@ -26,7 +27,6 @@ export default function Resume({ page }) {
           <div className="col-xs-12 col-sm-7">
             <div className="block-title">
               <h3>
-                {" "}
                 <ColorText text={education.title} />
               </h3>
             </div>

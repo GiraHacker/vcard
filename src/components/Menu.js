@@ -1,24 +1,24 @@
-import React from "react";
+import React, { useState } from 'react';
+import { removeAllCaracteresSpecial } from "../components/helpers/utils.js";
 
-export default function Menu({ items, onSelect }) {
-  let hasClass = false; // variável de controle
-  function clear(item) {
-    return item.replace(/[^a-zA-Z0-9 ]/g, "").replace(/\s+/g, "");
-  }
+
+export default function Menu({ items }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const handleSectionClick = (index) => {
+    console.log(index);
+    setActiveIndex(index);
+  };
+
   return (
     <ul className="main-menu">
-      {items.map((item) => (
-        <li
-          key={`menu${item.menu}`}
-          className={`item ${hasClass ? "" : "active"}`}
-          onClick={() => onSelect(item)}
-        >
-          <a href={`#${clear(item.menu).toLowerCase()}`} className="nav-anim">
-            <span className={`menu-icon lnr ${item.classIcon}`}></span>
-            <span className="link-text">{item.menu}</span>
-          </a>
-        </li>
-      ))}
-    </ul>
+    {items.map((item, index) => (
+      <li key={index} className={index === activeIndex ? "section-active" :  ""}>
+        <a href={`#${removeAllCaracteresSpecial(item.menu).toLowerCase()}`} className="nav-anim" onClick={() => {handleSectionClick(index);}}>
+          <span className={`menu-icon lnr ${item.classIcon}`}></span>
+          <span className="link-text">{item.menu}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
   );
 }

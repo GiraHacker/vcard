@@ -1,12 +1,14 @@
 import React from "react";
-import ColorText from "../ColorText";
-import { removeAllCaracteresSpecial } from "../helpers/utils.js";
+import ColorText from "../components/ColorText";
+import { removeAllCaracteresSpecial } from "../components/helpers/utils.js";
 
 
 export default function Contact({page}) {
   const isRequired = "é obrigatório.";
   return (
-    <section data-id={`${removeAllCaracteresSpecial(page.menu).toLowerCase()}`}  className="animated-section">
+    <section 
+             id={`#${removeAllCaracteresSpecial(page.menu).toLowerCase()}`}
+             className="animated-section">
       <div className="page-title">
         <h2><ColorText text= {page.menu} /></h2>
       </div>

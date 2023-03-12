@@ -1,21 +1,16 @@
 import React from "react";
+import { removeAllCaracteresSpecial } from "../components/helpers/utils.js";
+import ColorText from "../components/ColorText";
 
 export default function AboutMe({ page }) {
-  function clear(item) {
-    return item.replace(/[^a-zA-Z0-9 ]/g, "").replace(/\s+/g, "");
-  }
   return (
     <section
-      data-id={`${clear(page.menu).toLowerCase()}`}
+      id={`#${removeAllCaracteresSpecial(page.menu).toLowerCase()}`}
       className="animated-section"
     >
       <div className="page-title">
         <h2>
-          {page.menu.replace(
-            page.menu.substring(page.menu.lastIndexOf(" ") + 1),
-            ""
-          )}
-          <span>{page.menu.substring(page.menu.lastIndexOf(" ") + 1)}</span>
+            <ColorText text={page.menu} />
         </h2>
       </div>
 

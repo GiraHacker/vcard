@@ -1,12 +1,11 @@
 import React from "react";
+import { removeAllCaracteresSpecial } from "../components/helpers/utils.js";
 
 export default function Home({ page, name }) {
-  function clear(item) {
-    return item.replace(/[^a-zA-Z0-9 ]/g, "").replace(/\s+/g, "");
-  }
   return (
     <section
-      data-id={`${clear(page.menu).toLowerCase()}`}
+      
+      id={`#${removeAllCaracteresSpecial(page.menu).toLowerCase()}`}
       className="animated-section start-page"
     >
       <div className="section-content vcentered">
