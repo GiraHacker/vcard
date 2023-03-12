@@ -3,19 +3,10 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// import './css/reset.css'
-// import './css/bootstrap-grid.min.css'
-// import './css/bootstrap-grid.min.css.map'
-// import './css/animations.css'
-// import './css/owl.carousel.css'
-// import './css/magnific-popup.css'
-// import './css/main.css'
-
 const jsScript = [
                   'js/modernizr.custom.js',
                   'js/animating.js',
                   'js/imagesloaded.pkgd.min.js',
-                  'https://www.google.com/recaptcha/api.js',
                   'js/perfect-scrollbar.min.js',
                   'js/jquery.shuffle.min.js',
                   'js/masonry.pkgd.min.js',
@@ -31,7 +22,5 @@ root.render(
     <App scriptLoading={jsScript} />
   </React.StrictMode>
 );
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();

@@ -51,7 +51,7 @@ export default function Contact({page}) {
                 <iframe
                   title="local"
                   loading="lazy"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.9502406797145!2d-46.74102738502019!3d-23.630743469767526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce50e8c211d583%3A0x9e3d3f4fc4dcafcf!2sVila%20Andrade%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1sen!2sbr!4v1647009915422!5m2!1sen!2sbr&amp;zoom=100&amp;output=embed"
+                  src=""
                 ></iframe>
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function Contact({page}) {
             <form
               id="contact_form"
               className="contact-form"
-              action="https://lmpixels.com/demo/breezycv/darkfw/1/contact_form/contact_form.php"
+              action=""
               method="post"
             >
               <div className="messages"></div>
@@ -133,12 +133,6 @@ export default function Contact({page}) {
                     </div>
                   </div>
                 </div>
-
-                <div
-                  className="g-recaptcha"
-                  data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI"
-                  data-theme="dark"
-                ></div>
 
                 <input
                   type="submit"
