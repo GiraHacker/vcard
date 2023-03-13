@@ -1,0 +1,46 @@
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  
+  .spinner-dot {
+    display: inline-block;
+    width: 0.7em;
+    height: 0.7em;
+    margin: 0.2em;
+    border-radius: 50%;
+    animation: spinner-animation 0.6s ease-in-out infinite both;
+  }
+  
+  .spinner-dot:nth-child(1) {
+    background-color: #007bff;
+  }
+  
+  .spinner-dot:nth-child(2) {
+    background-color: #6c757d;
+    animation-delay: -0.4s;
+  }
+  
+  .spinner-dot:nth-child(3) {
+    background-color: #28a745;
+    animation-delay: -0.2s;
+  }
+  
+  @keyframes spinner-animation {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
