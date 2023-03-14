@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-// import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
 import Spinner from "./components/Spinner/Spinner";
+import Data from './data/content.json';
+import Photo from './images/main_photo.jpg'
+
 
 export default function App() {
   const [selectedSection, setSelectedSection] = useState(0);
@@ -34,7 +36,7 @@ export default function App() {
           <header id="site_header" className="header mobile-menu-hide">
             <div className="header-content">
               <div className="header-photo">
-                <img src="img/main_photo.jpg" alt="Alex Smith" />
+                <img src={Photo} alt="Alex Smith" />
               </div>
               <div className="header-titles">
                 <h2>Alex Smith</h2>

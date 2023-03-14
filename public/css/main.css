@@ -260,6 +260,7 @@ input[type="submit"]:focus {
   ul.main-menu a:focus,
   ul.main-menu a:hover {
     color: #04b4e0;
+    cursor: pointer;
   }
   ul.main-menu .menu-icon {
     display: block;
@@ -406,6 +407,7 @@ input[type="submit"]:focus {
 }
 .social-links ul li a:hover {
   opacity: 1;
+  color: #04b4e0;
   background-color: rgba(255, 255, 255, 0.2);
 }
 .header-buttons {
@@ -2560,12 +2562,7 @@ blockquote {
   border: none;
 }
 
-.nav-anim {
-  cursor: pointer;
-}
-
-
-
+/* MEU MAIN */
 .sections section {
   display: none;
 }
@@ -2600,3 +2597,16 @@ blockquote {
     }
   }
   /* FADE FIM */
+
+  .bg-image {
+    background-size: cover;
+  }
+  
+.overlay {
+  background-color: rgba(0,0,0,0.5); /* definir cor com transparência */
+  height: 500px; /* mesma altura da div anterior */
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
