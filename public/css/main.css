@@ -2563,50 +2563,92 @@ blockquote {
 }
 
 /* MEU MAIN */
+.cursor {
+  cursor: pointer;
+}
+.sections {
+  position: relative;
+  height: 100%;
+  -webkit-perspective: 1500px;
+  -moz-perspective: 1500px;
+  perspective: 1500px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 .sections section {
-  display: none;
+  position: absolute;
+  background-color: #222;
+  height: 100%;
+  width: 100%;
+  padding: 60px;
+  overflow: auto;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 .sections section.active {
+  overflow: auto;
+  visibility: visible;
+  z-index: 99;
   display: block;
   animation-name: fade-in;
-  animation-duration: 1.0s;
+  animation-duration: 1s;
 }
 
 .sections section:not(.active) {
   animation-name: fade-out;
-  animation-duration: 1.0s;
+  animation-duration: 1s;
 }
 
 /* FADE */
 @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
   }
-  
-  @keyframes fade-out {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
+  to {
+    opacity: 1;
   }
-  /* FADE FIM */
-
-  .bg-image {
-    background-size: cover;
-  }
-  
-.overlay {
-  background-color: rgba(0,0,0,0.5); /* definir cor com transparência */
-  height: 500px; /* mesma altura da div anterior */
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* FADE FIM */
+
+/*SCROLLBAR*/
+.section.active::-webkit-scrollbar,
+.section.active::-ms-scrollbar {
+  width: 12px;
+}
+
+.section.active::-webkit-scrollbar-track,
+.section.active::-ms-scrollbar-track {
+  background-color: white;
+}
+
+.section.active::-webkit-scrollbar-thumb,
+.section.active::-ms-scrollbar-thumb {
+  background-color: #04b4e0;
+}
+
+.section.active::-webkit-scrollbar-thumb:hover,
+.section.active::-ms-scrollbar-thumb:hover {
+  background-color: #333;
+}
+

@@ -28,7 +28,7 @@
       }
     },
     {
-      "menu": "Sobre",
+      "menu": "Sobre Mim",
       "classIcon": "lnr-user",
       "content": {
         "text": [
@@ -147,7 +147,7 @@
             },
             {
               "name": "Python",
-              "value": 50
+              "value": 70
             }
           ]
         },
