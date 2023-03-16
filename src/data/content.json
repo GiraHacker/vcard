@@ -1,6 +1,6 @@
 {
-  "name": "Jonathas",
-  "occupation": "Software Enginner [Full-Stack]",
+  "name": "Jonathas Souza",
+  "occupation": "Software Enginner",
   "menus": [
     {
       "menu": "Home",
@@ -24,7 +24,7 @@
             "link": "#"
           }
         ],
-        "occupations": ["Back-End", "Front-End"]
+        "occupations": ["Back-End", "Front-End","Full-Stack"]
       }
     },
     {

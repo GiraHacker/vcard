@@ -2466,6 +2466,7 @@ blockquote {
   display: block;
   width: 100%;
   position: relative;
+  animation: animacao-texto 5s infinite;;
 }
 .start-page .mask {
   content: "";
@@ -2603,7 +2604,7 @@ blockquote {
   z-index: 99;
   display: block;
   animation-name: fade-in;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
 }
 
 .sections section:not(.active) {
@@ -2630,25 +2631,46 @@ blockquote {
   }
 }
 /* FADE FIM */
-
-/*SCROLLBAR*/
-.section.active::-webkit-scrollbar,
-.section.active::-ms-scrollbar {
-  width: 12px;
+.text-animation {
+  position: relative;
+}
+.text-animation > div {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 35px);
+  opacity: 0;
+  animation: display 30s infinite;
 }
 
-.section.active::-webkit-scrollbar-track,
-.section.active::-ms-scrollbar-track {
-  background-color: white;
+div:nth-child(2) {
+  animation-delay: 5s;
+}
+div:nth-child(3) {
+  animation-delay: 10s;
+}
+div:nth-child(4) {
+  animation-delay: 15s;
 }
 
-.section.active::-webkit-scrollbar-thumb,
-.section.active::-ms-scrollbar-thumb {
-  background-color: #04b4e0;
+@keyframes display {
+  0% {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
 }
-
-.section.active::-webkit-scrollbar-thumb:hover,
-.section.active::-ms-scrollbar-thumb:hover {
-  background-color: #333;
-}
-
