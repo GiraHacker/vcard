@@ -9,7 +9,7 @@ html {
   overflow: hidden;
 }
 body {
-  background-color: #04b4e0;
+  background-color: #444;
   margin: 0;
   width: 100%;
   height: 100%;
@@ -23,6 +23,7 @@ body {
   background-position: center;
   background-position: 50% 50%;
   background-size: cover;
+  opacity: 1;
 }
 h1,
 h2,
@@ -229,8 +230,7 @@ input[type="submit"]:focus {
     padding: 65px 30px 45px;
     overflow: auto;
   }
-  .header-titles {
-  }
+
   ul.main-menu {
     position: absolute;
     padding: 15px 0;
@@ -256,9 +256,9 @@ input[type="submit"]:focus {
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  ul.main-menu a.active,
-  ul.main-menu a:focus,
-  ul.main-menu a:hover {
+  ul.main-menu .nav-anim.active,
+  ul.main-menu .nav-anim:focus,
+  ul.main-menu .nav-anim:hover {
     color: #04b4e0;
     cursor: pointer;
   }
@@ -2399,7 +2399,6 @@ blockquote {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: -1;
 }
 .vcentered {
   vertical-align: middle;
