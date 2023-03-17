@@ -2,10 +2,10 @@ import React from "react";
 
 export default function NavArrows({selectedSection, setSelectedSection}) {
     const handleNextClick = () => {
-        setSelectedSection(selectedSection === 2 ? 0 : selectedSection + 1);
+        setSelectedSection(selectedSection === 3 ? 0 : selectedSection + 1);
       };
       const handlePreviousClick = () => {
-        setSelectedSection(selectedSection === 0 ? 2 : selectedSection - 1);
+        setSelectedSection(selectedSection === 0 ? 3 : selectedSection - 1);
       };
 
   return (

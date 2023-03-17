@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 
 export default function MenuToggle({ setHeaderClass,menuToggleClass,setMenuToggleClass }) {
-  const [menuHideClass, setMenuHideClass] = useState("");
+  const [menuHideClass, setMenuHideClass] = useState("mobile-menu-hide");
 
 
   // função que irá lidar com o clique no botão
   const handleMenuToggleClick = () => {
     setMenuHideClass(menuHideClass === "" ? "mobile-menu-hide" : "");
     setMenuToggleClass(menuToggleClass === "" ? "open" : "");
-    setHeaderClass("animate " + menuHideClass);
-
+    setHeaderClass(menuHideClass === "mobile-menu-hide" ? "animate mobile-menu-hide" : "");
   };
 
   return (
